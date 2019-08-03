@@ -75,7 +75,6 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 
 theme: myvaline
-#themes: yilia-plus yilia-with-valine
 #themes: yilia
 
 #leancloud:
