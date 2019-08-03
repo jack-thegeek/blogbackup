@@ -27,7 +27,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
-  - 'test.md'
+
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
@@ -75,6 +75,7 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 
 theme: myvaline
+#themes: yilia-plus yilia-with-valine
 #themes: yilia
 
 #leancloud:
