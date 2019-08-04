@@ -1,9 +1,10 @@
 # Header
 menu:
-  主页: /
+  #主页: /
   归档: /archives
   技术: /categories/技术
   读书: /categories/读书
+  听歌: /categories/听歌
   杂乱: /categories/杂乱
   日志: /log/
   #关于: /about

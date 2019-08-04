@@ -50,7 +50,7 @@ highlight:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 10
+  per_page: 5
   order_by: -date
   
 # Category & Tag
@@ -87,7 +87,8 @@ theme: myvaline
 deploy:
   type: git
   repo:
-      github: git@github.com:jack-thegeek/jack-thegeek.github.io.git
+      #github: git@github.com:jack-thegeek/jack-thegeek.github.io.git
+      gitee: git@gitee.com:jack-the-geek/jack-the-geek.git
       coding: git@git.coding.net:jack-the-geek/jack-the-geek.git
   branch: master
 
