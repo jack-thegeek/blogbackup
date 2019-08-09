@@ -27,8 +27,8 @@ rss: /atom.xml
 
 #6、Valine https://valine.js.org
 valine: 
- appid: 'Q9AnfILoWvdHz8KyBMYT7C7a-gzGzoHsz' #Leancloud应用的appId
- appkey: 'rDc18ASqCfjwWAHWBnPfnS46' #Leancloud应用的appId
+ appid: 'CEBHurrFdOBXer38rsriXIy1-MdYXbMMI' #Leancloud应用的appId
+ appkey: 'trkUgCsG7AKRnWvNxcrzgTjS' #Leancloud应用的appId
  guest_info: 'nick,mail' #可选信息nick,mail,link
  verify: false #验证码
  notify: false #评论回复提醒

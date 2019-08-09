@@ -3,6 +3,35 @@ title: 更新日志
 date: 2019-07-31 23:30:55
 
 ---
+<map name="log2">
+	<area shape="circle" coords="184,168,20" href="/log/log2.html">
+</map>
+<div align="center">
+	<img src="https://cdn.jsdelivr.net/gh/jack-thegeek/pic/2019/日志页.jpg" width="25%" usemap="#log2">
+</div>
+
+#2019/8/8
+* 修复页面链接过长不会自动换行的问题
+* 使用Github+jsDelivr图床方案
+* 修复网页端评论区过大的问题
+* 添加禁止评论的功能
+* 新增显示文章更新日期
+
+# 2019/8/7
+* 新增文章字数统计与阅读时长
+* 新增站点访问人数与次数
+* 由于国内版leancloud需备案，暂把评论后台更改为[国际版](https://console.leancloud.app/app.html?appid=CEBHurrFdOBXer38rsriXIy1-MdYXbMMI#/general)
+* 新增鼠标点击效果
+* 增加一个隐藏页面，欢迎寻找入口
+
+# 2019/8/6
+* 加密部分JS代码，增强安全性
+* 修复一个图片不是使用https加载的问题
+
+# 2019/8/5
+* 修复输入密码后图片不显示问题
+* 微调评论区域样式，使与正文契合
+
 # 2019/8/4
 * 同步部署托管到码云，推荐使用[https://jack-the-geek.gitee.io/](https://jack-the-geek.gitee.io/)访问本站
 * “返回原文”可跳转到之前阅读的位置

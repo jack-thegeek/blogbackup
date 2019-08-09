@@ -2,6 +2,7 @@
   <%if(post.noDate != "true"){%>
     <div class="article-meta">
       <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+
     </div>
   <%}%>
   <div class="article-inner">
@@ -11,6 +12,25 @@
     <% if (post.link || post.title){ %>
       <header class="article-header">
         <%- partial('post/title', {class_name: 'article-title'}) %>
+        <!--显示阅读次数-->
+        <% if (!index && post.comments){ %>
+          <br/>
+          <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+            <div style="margin-top:-10px;margin-bottom:5px;left:10px;width: 140px;float: left;">
+              <span class="icon-sort"></span>
+              <span id="busuanzi_container_page_pv" style="color:#999999;font-size:13px;margin-left: 5px;">
+              阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+              </span>
+            </div>
+          </a>
+        <% } %>
+        <!--显示阅读次数完毕-->
+        <!-- 开始添加字数统计-->
+        <% if(theme.word_count && !post.no_word_count){%>
+          <%- partial('post/word') %>
+          <% } %>
+        <!-- 添加完成 -->
+
       </header>
       <% if (!index){ %>
       <div class="article-info article-info-post">
@@ -48,6 +68,15 @@
     </div>
     <% } %>
   </div>
+
+  <% if (!index && post.u){ %>
+    <div class="info">
+    <p>更新于：</p><br/>
+    <p><%= post.updated.format("YYYY-MM-DD HH:mm:ss") %></p>
+    </div>
+  <% } %>
+ 
+
   <% if (!index){ %>
     <%- partial('post/nav') %>
   <% } %>
@@ -57,8 +86,22 @@
 <%- partial('post/share') %>
 <% } %>
 
-<% if (!index&&theme.valine && theme.valine.appid && theme.valine.appkey){ %>
-    <section id="comments" style="margin:2%;padding:5%;background:#fff;">
-      <%- partial('post/valine') %>
-    </section>
-<% } %>
+<% if (!index&&theme.valine && theme.valine.appid && theme.valine.appkey &&
+post.comments){ %> <section id="comments" class="article" style="padding:
+20px;"> <%- partial('post/valine') %> </section> <% } %>
+
+<style type="text/css">
+  .info{
+    padding: 0 0 0 40px;
+    color: #999999;
+    font-size: 0.9em;
+
+  }
+  @media (max-width:400px){
+    .info{
+      padding: 0;
+      color: #999999;
+     font-size: 0.9em;
+      }
+    }
+</style>

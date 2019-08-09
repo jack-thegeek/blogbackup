@@ -11,13 +11,19 @@ author: 無名小站
 language: zh-CN
 timezone:
 
+# 是否开启字数统计
+#不需要使用，直接设置值为false，或注释掉
+word_count: True
+
+busuanzi:
+  enable: true
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://jack-thegeek.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
-
+display_updated: true
 # Directory
 source_dir: source
 public_dir: public
@@ -87,7 +93,7 @@ theme: myvaline
 deploy:
   type: git
   repo:
-      #github: git@github.com:jack-thegeek/jack-thegeek.github.io.git
+      github: git@github.com:jack-thegeek/jack-thegeek.github.io.git
       gitee: git@gitee.com:jack-the-geek/jack-the-geek.git
       coding: git@git.coding.net:jack-the-geek/jack-the-geek.git
   branch: master
