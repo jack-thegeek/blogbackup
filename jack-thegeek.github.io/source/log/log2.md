@@ -1,6 +1,6 @@
 ---
 title: 胡思乱想
-
+comments: false
 ---
 <script>
 	alert("恭喜你发现了彩蛋！");

@@ -10,7 +10,14 @@ date: 2019-07-31 23:30:55
 	<img src="https://cdn.jsdelivr.net/gh/jack-thegeek/pic/2019/日志页.jpg" width="25%" usemap="#log2">
 </div>
 
-#2019/8/8
+# 2019/8/13
+* 新增恶搞标题
+* 新增网页运行时间
+
+# 2019/8/12
+* 归档页面添加分页：30条/页
+
+# 2019/8/8
 * 修复页面链接过长不会自动换行的问题
 * 使用Github+jsDelivr图床方案
 * 修复网页端评论区过大的问题
@@ -46,7 +53,7 @@ date: 2019-07-31 23:30:55
 * 移动端头像图标微调
 * 代码同时部署托管到coding，使用[https://jack-the-geek.coding.me/](https://jack-the-geek.coding.me/)可大大提升访问速度
 * 新增了几个社交媒体图标
-* 新增主目录分页显示，五条/页
+* 新增主目录分页显示，5条/页
 
 # 2019/7/30
 * Jquery库引入采用https方式,修复safari不能访问的问题

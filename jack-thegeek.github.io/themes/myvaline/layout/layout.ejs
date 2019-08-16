@@ -28,15 +28,16 @@ jQuery(document).ready(function($) {
             "top": y - 20,
             "left": x,
             "position": "absolute",
+            "font-size": "14px",
             //"font-weight": "bold",
-            "color": "#FF0000"
+            "color": "#FF4536"
         });
         $("body").append($i);
         $i.animate({
             "top": y - 180,
             "opacity": 0
         },
-      3000,
+      2000,
       function() {
           $i.remove();
       });
@@ -47,4 +48,24 @@ jQuery(document).ready(function($) {
 function delay() {
     $(".buryit").removeAttr("onclick");
 }
+</script>
+
+<!--浏览器搞笑标题-->
+<script>
+ var OriginTitle = document.title;
+ var titleTime;
+ document.addEventListener('visibilitychange', function () {
+     if (document.hidden) {
+         $('[rel="icon"]').attr('href', "/favicon.png");
+         document.title = 'ヽ(●-`Д´-)ノ你丑你就走！';
+         clearTimeout(titleTime);
+     }
+     else {
+         $('[rel="icon"]').attr('href', "/favicon.png");
+         document.title = 'ヾ(Ő∀Ő3)ノ你帅就回来！';
+         titleTime = setTimeout(function () {
+             document.title = OriginTitle;
+         }, 2000);
+     }
+ });
 </script>
