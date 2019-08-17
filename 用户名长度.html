@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test</title>
+</head>
+
+<body>
+    用户名：<input type="text" name="" id="input">
+    <button onclick="validateName()">验证</button>
+    <div id="div"></div>
+
+</body>
+    <script type="text/javascript">
+    var input = document.getElementsByTagName("input")[0];
+    var div=document.getElementsByTagName("div")[0];
+    function validateName() {
+        if (input.value.length >= 6 && input.value.length <= 18) {
+            //alert("valid");
+            div.innerText = 'valid';
+            div.style.color='blue';
+
+        } else {
+            //alert("invalid");
+            div.innerText = 'invalid';
+            div.style.color='red';
+
+        }
+    }
+    </script>
+</html>

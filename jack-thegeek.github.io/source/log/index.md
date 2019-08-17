@@ -4,15 +4,22 @@ date: 2019-07-31 23:30:55
 
 ---
 <map name="log2">
-	<area shape="circle" coords="184,168,20" href="/log/log2.html">
+	<area shape="circle" coords="170,155,10" href="/log/log2.html">
 </map>
 <div align="center">
 	<img src="https://cdn.jsdelivr.net/gh/jack-thegeek/pic/2019/日志页.jpg" width="25%" usemap="#log2">
 </div>
 
+# 2019/8/17
+* 微调主页样式
+
+# 2019/8/16
+* 添加阴影样式
+* 更改文本选中颜色为槿紫（手动滑稽）
+
 # 2019/8/13
 * 新增恶搞标题
-* 新增网页运行时间
+* 新增网站运行时间
 
 # 2019/8/12
 * 归档页面添加分页：30条/页

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>goodjob</h1>
+    <!--
+	<script type="text/javascript">document.write("woe")</script>
+	
+	<script>
+		document.write(Date());
+	</script>
+	
+	<p id="demo">我的第一个段落。</p>
+	<script>
+		document.getElementById("demo").innerHTML="段落已修改。";
+	</script>
+
+	<br/>
+
+	<script type="text/javascript">
+		var i=3;
+		if(i>0){
+			document.write("fantisstic");
+		}
+		while(i>0){
+			document.write("<br/>"+i);
+			i--;
+		}
+	</script>
+	
+
+	<script type="text/javascript">
+
+		function out(a,b) {
+			var c = a +b;
+			return c;
+		}
+
+		var kk=out(10,20);
+		alert(kk);
+	
+		
+	</script>
+	
+	<script type="text/javascript">
+		function out(){
+			document.write("this is an example");
+
+		}
+	</script>
+
+	<input type="button" value="click here" onclick="out()"></body></br>
+
+	<button onclick="out()">another button</button>
+	-->
+    <!--捕捉异常
+
+	<script type="text/javascript">
+		function demo(){
+			try{
+				alert(str)
+			}catch (err){
+				alert(err)
+			}
+		}
+		demo()
+	</script>
+	-->
+    <!--dom操作html
+	<p id="kk">Hello</p>
+	<button onclick="out()">click here</button>
+	<script type="text/javascript">
+		function out(){
+			var nv=document.getElementById("kk");
+			nv.innerHTML="World"
+		}
+	</script>
+
+	-->
+    <!--
+	dom控制css
+	<img src="https://pic.superbed.cn/item/5d411cad451253d178ecb6c6.jpg" id="haha" height=50>
+	<button onclick="demo()">next one</button>
+	<script type="text/javascript">
+		function demo(){
+			document.getElementById("haha").src="https://pic3.superbed.cn/item/5d411148451253d178ec37d6.jpg";
+			//document.getElementById("haha").height=100;
+		}
+		
+	</script>
+	
+
+	<button id="pid">button</button>
+	<script type="text/javascript">
+		var x = document.getElementById("pid");
+		x.addEventListener("click",Hello);
+		function Hello(){
+			alert("Hello");
+		}
+	</script>
+	-->
+    <!--
+	<div id="div">
+		<button id="btn1">按钮</button>
+	</div>
+	<script type="text/javascript">
+		var btn1=document.getElementById("btn1");
+		btn1.onclick=function(){alert("goodjob")};
+		btn1.onclick=function(){alert("goodjob2")};//覆盖
+
+	</script>
+	-->
+    <script type="text/javascript">
+    var flag = true, //状态true为正常的状态,false为放大的状态
+        imgH, //图片的高度
+        imgW, //图片的宽度
+        img = document.getElementById("kk"); //图片元素
+    img.onclick = function() {
+        alert("dddd")
+        //图片点击事件
+        imgH = img.height; //获取图片的高度
+        imgW = img.width; //获取图片的宽度
+        if (flag) {
+            //图片为正常状态,设置图片宽高为现在宽高的2倍
+            flag = false; //把状态设为放大状态
+            img.height = imgH * 2;
+            img.width = imgW * 2;
+        } else {
+            //图片为放大状态,设置图片宽高为现在宽高的二分之一
+            flag = true; //把状态设为正常状态
+            img.height = imgH / 2;
+            img.width = imgW / 2;
+        }
+
+    }
+    </script>
+    <img src="https://s2.ax1x.com/2019/08/05/egVCfs.jpg" id="kk" width="25%">
+</body>
+
+</html>
