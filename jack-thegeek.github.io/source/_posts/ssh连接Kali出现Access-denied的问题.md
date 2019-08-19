@@ -5,6 +5,11 @@ tags: linux
 categories: 技术
 ---
 <font color="#999999">关于ssh连接Kali Linux时出现Access denied的解决方法</font>
+<style type="text/css">
+	img{
+		max-width: 90%;
+	}
+</style>
 
 <!--more-->
 ---
@@ -15,10 +20,23 @@ categories: 技术
 ```text
 root@kali:/etc/ssh# vi ssh_config 
 ```
-<img src="https://ae01.alicdn.com/kf/Hdfcc5d93c1444305a64ab7cfa50a6f6cd.jpg" width="50%">
+<img src="https://ae01.alicdn.com/kf/Hdfcc5d93c1444305a64ab7cfa50a6f6cd.jpg">
 ```
 root@kali:/etc/ssh# vi sshd_config 
 ```
-<img src="https://ae01.alicdn.com/kf/Hc5a8835754b7431c99761666f3b5eb328.png" width="50%">
+<img src="https://ae01.alicdn.com/kf/Hc5a8835754b7431c99761666f3b5eb328.png">
+
+开启ssh服务
+```
+/etc/init.d/ssh start
+```
+查看ssh状态
+```
+/etc/init.d/ssh status
+```
+设置开机启动
+```
+update-rc.d ssh enable
+```
 
 然后就可以用putty连上去了啦

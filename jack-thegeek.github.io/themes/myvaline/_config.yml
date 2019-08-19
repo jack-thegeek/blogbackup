@@ -11,15 +11,19 @@ menu:
 
 # SubNav
 subnav:
-  github: "https://github.com/jack-thegeek/jack-thegeek.github.io"
-  wechat: "869424311"
+  fab fa-github: "https://github.com/jack-thegeek/jack-thegeek.github.io"
+  fab fa-weixin: ""
+  #fa-google: ""
+  fab fa-telegram: ""
+  fas fa-envelope: ""
+  #wechat: "869424311"
   #weibo: "http://weibo.com/378920304"
   #rss: "/atom.xml"
   #zhihu: "#"
   #douban: "#"
-  mail: "jackson52076@gmail.com"
+  #mail: "jackson52076@gmail.com"
   #facebook: "#"
-  google: "https://www.google.com"
+  #google: "https://www.google.com"
   #twitter: "#"
   #linkedin: "#"
 
