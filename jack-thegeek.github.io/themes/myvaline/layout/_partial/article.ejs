@@ -1,37 +1,61 @@
 <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
-  <%if(post.noDate != "true"){%>
-    <div class="article-meta">
-      <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
-
-    </div>
-  <%}%>
+  
   <div class="article-inner">
     <% if (theme.fancybox){ %>
       <input type="hidden" class="isFancy" />
     <% } %>
     <% if (post.link || post.title){ %>
       <header class="article-header">
-        <%- partial('post/title', {class_name: 'article-title'}) %>
-        <!--显示阅读次数-->
-        <% if (!index && post.comments){ %>
-          <br/>
-          <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
-            <div style="margin-top:-10px;margin-bottom:5px;left:10px;width: 140px;float: left;">
-              <span class="icon-sort"></span>
-              <span id="busuanzi_container_page_pv" style="color:#999999;font-size:13px;margin-left: 5px;">
-              阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
-              </span>
-            </div>
-          </a>
-        <% } %>
-        <!--显示阅读次数完毕-->
-        <!-- 开始添加字数统计-->
-        <% if(theme.word_count && !post.no_word_count){%>
-          <%- partial('post/word') %>
-          <% } %>
-        <!-- 添加完成 -->
+        <div>
+         <%if(index){%>
+           <!--主页标题-->
+           <%- partial('post/title', {class_name: 'article-title'}) %>
+            <!--主页日期与标题-->
+            <%if(post.noDate != "true"){%>
+              <div class="article-meta">
+                <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+              </div>
+            <%}%>
+          <% } %><!--主页日期结束-->
 
+    <%if(!index){%>
+        <!--文章标题-->
+        <%- partial('post/title', {class_name: 'article-intitle'}) %>
+    <%}%>
+          <div class="post-info autobox">
+            <!--文章日期-->
+            <%if(!index){%>
+              
+              <%if(post.noDate != "true"){%>
+                
+                  <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+                
+              <%}%>
+            <% } %><!--文章日期结束-->
+            
+            <%if(!index){%>
+            <!-- 开始添加字数统计-->
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <% if(theme.word_count && !post.no_word_count){%>
+              <%- partial('post/word') %>
+              <% } %>
+            <!-- 添加完成 -->
+             &nbsp;&nbsp;|&nbsp;&nbsp;
+            <!--显示阅读次数-->
+            <% if (!index && post.comments){ %>
+                <div>
+                  <span class="icon-sort"></span>
+                  <span id="busuanzi_container_page_pv">
+                  <i class="fa fa-book-open"></i> <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+                  </span>
+                </div>
+            <% } %>
+            <!--显示阅读次数完毕-->
+          <%}%>
+          </div>
+        </div>
       </header>
+      <!-- 标签 -->
       <% if (!index){ %>
       <div class="article-info article-info-post">
         <%- partial('post/tag') %>
@@ -39,6 +63,7 @@
         <div class="clearfix"></div>
       </div>
       <% } %>
+      <!--标签结束-->
     <% } %>
     <div class="article-entry" itemprop="articleBody">	
       <% if (post.excerpt && index){ %>
@@ -51,10 +76,17 @@
 			  <%- toc(post.content) %>
 			</div>
 		<%}%>
-		
         <%- post.content %>
+    <!--更新日期-->
+    <% if (!index && post.u){ %>
+    <div style="color: #aaa;margin-top: 10px;">
+    更新于：
+    <%= post.updated.format("YYYY-MM-DD HH:mm:ss") %>
+    </div>
+    <% } %>
       <% } %>
     </div>
+    <!--主页的标签与more按钮-->
     <% if (index){ %>
     <div class="article-info article-info-index">
       <%- partial('post/tag') %>
@@ -67,14 +99,10 @@
       <div class="clearfix"></div>
     </div>
     <% } %>
+    <!--主页的标签结束-->
   </div>
 
-  <% if (!index && post.u){ %>
-    <div class="info">
-    <p>更新于：</p><br/>
-    <p><%= post.updated.format("YYYY-MM-DD HH:mm:ss") %></p>
-    </div>
-  <% } %>
+  
  
 
   <% if (!index){ %>
@@ -89,19 +117,3 @@
 <% if (!index&&theme.valine && theme.valine.appid && theme.valine.appkey &&
 post.comments){ %> <section id="comments" class="article" style="padding:
 20px;"> <%- partial('post/valine') %> </section> <% } %>
-
-<style type="text/css">
-  .info{
-    padding: 0 0 0 40px;
-    color: #999999;
-    font-size: 0.9em;
-
-  }
-  @media (max-width:400px){
-    .info{
-      padding: 0;
-      color: #999999;
-     font-size: 0.9em;
-      }
-    }
-</style>

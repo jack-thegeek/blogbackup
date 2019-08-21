@@ -1,12 +1,20 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
+ 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <link href="https://cdn.bootcss.com/font-awesome/5.10.0-12/css/all.css" rel="stylesheet">
+    <title>a标签空链接href=#与href=javascript:void(0)的区别</title>
 </head>
+ 
 <body>
-    <i class="fab fa-weixin" style="font-size: 400px;color: green;"></i>
-    
+    <p style="width:100%;padding:10px;background:#999999">
+        <a href=javascript:void(0) οnclick=func()>点击执行函数func()</a>
+    </p>
+    <script>
+    function func() {
+        alert("ok");
+    }
+    </script>
 </body>
-</html>
+ 

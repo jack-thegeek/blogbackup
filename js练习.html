@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 onclick="this.innerHTML = 'Hello!'">点击此文本！</h1>
+    <span id="dd">just do it!</span>
+    <button type="button" id="bb" onclick="changec()">click</button>
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+        请把鼠标移上来
+    </div>
+    <p>此示例使用 addEventListener() 方法将 click 事件附加到按钮。</p>
+    <button id="myBtn">试一试</button>
+
+    <div id="div1"></div>
+    <script>
+    function changec() {
+        var q = document.getElementById('dd');
+        q.innerHTML = "Hello World!";
+        q.style.color = "red";
+    }
+
+    function mOver(obj) {
+        obj.innerHTML = "谢谢您"
+    }
+
+    function mOut(obj) {
+        obj.innerHTML = "请把鼠标移上来"
+    }
+
+    document.getElementById("myBtn").addEventListener("click", function() {
+        alert("Hello World!");
+    });
+
+    var para = document.createElement("p");
+    var node = document.createTextNode("这是新的文本。");
+    para.appendChild(node);
+    var element = document.getElementById("div1");
+    element.appendChild(para)
+    </script>
+</body>
+
+</html>
