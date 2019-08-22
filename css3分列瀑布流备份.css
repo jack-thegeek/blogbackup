@@ -1,0 +1,44 @@
+.autobox{
+  width: 85%;
+  column-gap:30px;
+  column-count: 2;
+  -moz-column-count:2; /* Firefox */
+  -webkit-column-count:2; /* Safari and Chrome */
+  margin: 0 auto;
+}
+@media (max-width: 400px) {
+  .autobox{
+    padding: 0px;
+    width: 100%;
+    column-count: 1;
+  }
+}
+
+.autobox-inline{
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sentence {
+  break-inside: avoid;
+  padding: 20px;
+  margin-bottom: 15px;
+  position: relative;
+  border: 1px solid #ddd;
+  background: #fff;
+  -webkit-transition: all 0.2s ease-in;
+  box-shadow: 5px 5px 5px #ccc;
+  p{
+    line-height: 2em;
+  }
+  .au{
+    padding-top: 10px;
+    color: #ccc;
+    text-align: right;
+    
+  }
+  &:hover{
+    box-shadow: 8px 8px 10px #ccc;
+  }
+}

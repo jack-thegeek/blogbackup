@@ -1,0 +1,74 @@
+# Header
+icon:
+  far fa-folder: 
+  fas fa-laptop-code:
+  fas fa-book:
+  fas fa-headphones-alt:
+  far fa-file-word:
+  fas fa-coffee:
+  fas fa-pen:
+  far fa-image:
+
+menu:
+  #主页: /
+    归档: /archives
+    技术: /categories/技术
+    读书: /categories/读书
+    听歌: /categories/听歌
+    杂乱: /categories/杂乱
+    日志: /log/
+    句子: /moment/
+    相册: /album/
+
+# SubNav
+subnav:
+  fab fa-github: "https://github.com/jack-thegeek/jack-thegeek.github.io"
+  fab fa-weixin: ""
+  #fa-google: ""
+  fab fa-telegram: ""
+  fas fa-envelope: ""
+
+rss: /atom.xml
+
+#6、Valine https://valine.js.org
+valine: 
+ appid: 'CEBHurrFdOBXer38rsriXIy1-MdYXbMMI' #Leancloud应用的appId
+ appkey: 'trkUgCsG7AKRnWvNxcrzgTjS' #Leancloud应用的appId
+ guest_info: 'nick,mail' #可选信息nick,mail,link
+ verify: false #验证码
+ notify: false #评论回复提醒
+ avatar: '' #评论列表头像样式：''/mm/identicon/monsterid/wavatar/retro/hide
+ avatar_cdn: 'https://www.gravatar.com/avatar/' #头像CDN
+ placeholder: '来玩耍呀 (●’◡’●)ﾉ' #评论框占位符
+ pageSize: 10 #评论分页
+ visitor: true #阅读统计
+
+# Content
+excerpt_link: more
+fancybox: false
+mathjax: false
+
+# Miscellaneous
+google_analytics: ''
+favicon: /favicon.png
+
+#你的头像url
+avatar: "/img/headportrait.jpg"
+#是否开启分享
+share: false
+
+#是否开启云标签
+tagcloud: true
+
+#是否开启友情链接
+#不开启——
+#friends: false
+#开启——
+friends:
+  易破解: http://www.ypojie.com/
+
+#是否开启“关于我”。
+#不开启——
+#aboutme: false
+#开启——
+aboutme: 不会唱、跳、Rap、篮球

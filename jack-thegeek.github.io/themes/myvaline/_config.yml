@@ -1,15 +1,24 @@
 # Header
+icon:
+  far fa-folder: 
+  fas fa-laptop-code:
+  fas fa-book:
+  fas fa-headphones-alt:
+  far fa-file-word:
+  fas fa-coffee:
+  fas fa-pen:
+  far fa-image:
+
 menu:
   #主页: /
-  归档: /archives
-  技术: /categories/技术
-  读书: /categories/读书
-  听歌: /categories/听歌
-  杂乱: /categories/杂乱
-  日志: /log/
-  句子: /moment/
-  相册: /album/
-  #关于: /about
+    归档: /archives
+    技术: /categories/技术
+    读书: /categories/读书
+    听歌: /categories/听歌
+    杂乱: /categories/杂乱
+    日志: /log/
+    句子: /moment/
+    相册: /album/
 
 # SubNav
 subnav:

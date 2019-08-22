@@ -109,10 +109,25 @@
       margin-top: 15px;
       text-align: center;
     }
+    .post-info{
+          padding: 10px 0px 0px 0px;
+          color: #aaa;
+          font-size: 12px;
+          z-index: 1;
+          time{
+            color: #aaa;
+            &:before{
+              color: #999;
+              content: "\f073";
+              font: 15px FontAwesome;
+              margin-right: 10px;
+            }
+          }
+        }
 
     .article-meta {
         width: auto;
-        top: 15px;
+        top: 10px;
         right: 10px;
         position: ralative;
 
@@ -133,22 +148,6 @@
                 float: right;
                 margin-right: -5px;
             }
-        }
-
-        .post-info{
-          padding: 10px 0px 0px 0px;
-          color: #aaa;
-          font-size: 12px;
-          z-index: 1;
-          time{
-            color: #aaa;
-            &:before{
-              color: #999;
-              content: "\f073";
-              font: 15px FontAwesome;
-              margin-right: 10px;
-            }
-          }
         }
 
         .article-tag-list {

@@ -4,13 +4,13 @@
     <% if (theme.fancybox){ %>
       <input type="hidden" class="isFancy" />
     <% } %>
+
     <% if (post.link || post.title){ %>
       <header class="article-header">
-        <div>
          <%if(index){%>
            <!--主页标题-->
            <%- partial('post/title', {class_name: 'article-title'}) %>
-            <!--主页日期与标题-->
+            <!--主页日期-->
             <%if(post.noDate != "true"){%>
               <div class="article-meta">
                 <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
@@ -22,38 +22,34 @@
         <!--文章标题-->
         <%- partial('post/title', {class_name: 'article-intitle'}) %>
     <%}%>
-          <div class="post-info autobox">
-            <!--文章日期-->
-            <%if(!index){%>
-              
-              <%if(post.noDate != "true"){%>
-                
-                  <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
-                
-              <%}%>
-            <% } %><!--文章日期结束-->
+    <div class="post-info autobox">
+      <!--文章日期-->
+      <%if(!index){%>
+        <%if(post.noDate != "true"){%>
+            <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+        <%}%>
+      <% } %><!--文章日期结束-->
             
-            <%if(!index){%>
-            <!-- 开始添加字数统计-->
-            &nbsp;&nbsp;|&nbsp;&nbsp;
-            <% if(theme.word_count && !post.no_word_count){%>
-              <%- partial('post/word') %>
-              <% } %>
-            <!-- 添加完成 -->
-             &nbsp;&nbsp;|&nbsp;&nbsp;
-            <!--显示阅读次数-->
-            <% if (!index && post.comments){ %>
-                <div>
-                  <span class="icon-sort"></span>
-                  <span id="busuanzi_container_page_pv">
-                  <i class="fa fa-book-open"></i> <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
-                  </span>
-                </div>
-            <% } %>
-            <!--显示阅读次数完毕-->
-          <%}%>
-          </div>
-        </div>
+        <%if(!index){%>
+        <!-- 开始添加字数统计-->
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <% if(theme.word_count && !post.no_word_count){%>
+          <%- partial('post/word') %>
+          <% } %>
+        <!-- 添加完成 -->
+         &nbsp;&nbsp;|&nbsp;&nbsp;
+        <!--显示阅读次数-->
+        <% if (!index && post.comments){ %>
+            <div>
+              <span class="icon-sort"></span>
+              <span id="busuanzi_container_page_pv">
+              <i class="fa fa-book-open"></i> <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;</span>
+            </div>
+        <% } %>
+        <!--显示阅读次数完毕-->
+      <%}%>
+      </div>
+
       </header>
       <!-- 标签 -->
       <% if (!index){ %>

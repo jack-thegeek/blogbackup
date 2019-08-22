@@ -20,6 +20,9 @@
 				display: block;
 				position: relative;
 				z-index: 100;
+				img{
+					width: 100%;
+				}
 			}
 			.header-menu{
 				height: auto;
@@ -29,7 +32,7 @@
 					cursor: default;
 				}
 				li{
-					display: inline-block;
+					display: inline;
 					margin: 3px;
 				}
 			}
@@ -129,6 +132,7 @@
 		-webkit-box-orient: vertical;
 	}
 	.header-menu{
+		float: left;
 		font-weight: 300;
 		line-height: 31px;
 		cursor: pointer;
@@ -142,10 +146,27 @@
 		-webkit-box-pack: center;
 		-webkit-box-align: center;
 		li{
+			display: inline;
 			cursor: default;
 			a{
 				font-size: 14px;
 				min-width: 300px;
+			}
+		}
+		div{
+			-webkit-transition: all 0.2s ease-in;
+			padding: 0 50px;
+			&:hover{
+				font-size: 1.2em;
+				transform: translateX(20px);
+				color:white;
+				background-color: #696969;
+				a{
+					color: white;
+				}
+			}
+			&:active{
+				background-color: black;
 			}
 		}
 	}
@@ -243,12 +264,4 @@
 		text-align: left;
 		line-height: 30px;
 	}
-}
-
-.duoshuo{
-	padding: 0 40px;
-}
-
-#disqus_thread{
-	padding: 0 40px;
 }

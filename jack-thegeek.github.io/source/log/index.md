@@ -1,7 +1,7 @@
 ---
 title: 更新日志
 date: 2019-07-31 23:30:55
-
+noDate: "true"
 ---
 <map name="log2">
 	<area shape="circle" coords="170,155,10" href="/log/log2.html">
@@ -10,10 +10,14 @@ date: 2019-07-31 23:30:55
 	<img src="https://cdn.jsdelivr.net/gh/jack-thegeek/pic/2019/日志页.jpg" width="25%" usemap="#log2">
 </div>
 
-# 2019/8/18
-* 修改大量样式
+# 2019/8/22
+* 句子迷样式更改为瀑布流，参考自[一只看夕阳的猫](https://www.cnblogs.com/a-cat/p/8618675.html)，致谢
+* 修改菜单样式（电脑版），使更易用
 
-# 2019/8/18
+# 2019/8/21
+* 修改文章相关信息为居中
+
+# 2019/8/20
 * 新增句子迷页面
 * 删去部分无用代码
 

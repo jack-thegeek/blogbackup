@@ -60,9 +60,51 @@
 				<section class="switch-part switch-part1">
 					<nav class="header-menu">
 						<ul>
-						<% for (var i in theme.menu){ %>
-							<li><a href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
-				        <%}%>
+							<!-- <% for (var i in theme.menu){ %>
+									<li><a href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
+			        		<%}%> -->
+			        		
+				        	<li>
+				        		<a href="/archives">
+				        			<div><i class="far fa-folder"></i>&nbsp;归档</div>
+				        		</a>
+				        	</li>
+				        	<li>
+				        		<a href="/categories/技术">
+				        			<div><i class="fas fa-laptop-code"></i>&nbsp;技术</div>
+				        		</a>
+				        	</li>
+				        	<li>
+				        		<a href="/categories/读书">
+				        			<div><i class="fas fa-book"></i>&nbsp;读书</div>
+				        		</a>
+				        	</li>
+				        	<li>
+				        		<a href="/categories/听歌">
+				        			<div><i class="fas fa-headphones-alt"></i>&nbsp;听歌</div>
+				        		</a>
+				        	</li>
+				        	<li>
+				        		<a href="/categories/杂乱">
+				        			<div><i class="far fa-file-word"></i>&nbsp;&nbsp;杂乱</div>
+				        		</a>
+				        	</li>
+				        	<li>
+				        		<a href="/log/">
+				        			<div><i class="fas fa-coffee"></i>&nbsp;日志</div>
+				        		</a>
+				        	</li>
+				        	<li>
+				        		<a href="/moment/">
+				        			<div><i class="fas fa-pen"></i>&nbsp;句子</div>
+				        		</a>
+				        	</li>
+				        	<li>
+				        		<a href="/album/">
+				        			<div><i class="far fa-image"></i>&nbsp;相册</div>
+				        		</a>
+				        	</li>
+			        		
 						</ul>
 					</nav>
 					<nav class="header-nav">
