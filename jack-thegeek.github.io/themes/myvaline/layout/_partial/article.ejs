@@ -74,7 +74,7 @@
 		<%}%>
         <%- post.content %>
     <!--更新日期-->
-    <% if (!index && post.u){ %>
+    <% if (!index && post.updated != "false"){ %>
     <div style="color: #aaa;margin-top: 10px;">
     更新于：
     <%= post.updated.format("YYYY-MM-DD HH:mm:ss") %>
